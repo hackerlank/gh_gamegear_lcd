@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for GG_AV
-Tue Dec 30 18:14:58 2014
+Tue Dec 30 19:22:01 2014
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
 ; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
 +------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
-; Device Name                                                                                          ; EPM3032ALC44-10    ;      ;    ;             ;
+; Device Name                                                                                          ; EPM3032ATC44-10    ;      ;    ;             ;
 ; Timing Models                                                                                        ; Final              ;      ;    ;             ;
 ; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
 ; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
@@ -49,8 +49,6 @@ applicable agreement for further details.
 ; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
 ; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
 ; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
-; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
-; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
 ; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
 ; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
 ; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
@@ -89,7 +87,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Tue Dec 30 18:14:58 2014
+    Info: Processing started: Tue Dec 30 19:22:01 2014
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off GG_AV -c GG_AV
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Started post-fitting delay annotation
@@ -98,7 +96,7 @@ Warning: Timing Analysis does not support the analysis of latches as synchronous
 Warning: No paths found for timing analysis
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 123 megabytes
-    Info: Processing ended: Tue Dec 30 18:14:58 2014
+    Info: Processing ended: Tue Dec 30 19:22:01 2014
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

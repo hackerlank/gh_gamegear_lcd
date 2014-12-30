@@ -48,3 +48,27 @@ set_global_assignment -name MAX7000_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_global_assignment -name VHDL_FILE GG_AV.vhd
 set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_location_assignment PIN_15 -to blue_out[0]
+set_location_assignment PIN_14 -to blue_out[1]
+set_location_assignment PIN_10 -to blue_out[2]
+set_location_assignment PIN_8 -to blue_out[3]
+set_global_assignment -name MISC_FILE "C:/Documents and Settings/Administrator/gamegear_av/GG_AV.dpf"
+set_location_assignment PIN_31 -to cs_out
+set_location_assignment PIN_35 -to csync
+set_location_assignment PIN_44 -to d_in[0]
+set_location_assignment PIN_43 -to d_in[1]
+set_location_assignment PIN_42 -to d_in[2]
+set_location_assignment PIN_40 -to d_in[3]
+set_location_assignment PIN_21 -to green_out[0]
+set_location_assignment PIN_20 -to green_out[1]
+set_location_assignment PIN_19 -to green_out[2]
+set_location_assignment PIN_18 -to green_out[3]
+set_location_assignment PIN_39 -to hsync
+set_location_assignment PIN_37 -to pix_clk
+set_location_assignment PIN_28 -to red_out[0]
+set_location_assignment PIN_27 -to red_out[1]
+set_location_assignment PIN_25 -to red_out[2]
+set_location_assignment PIN_23 -to red_out[3]
+set_location_assignment PIN_22 -to sc_out
+set_location_assignment PIN_38 -to en_in
+set_location_assignment PIN_33 -to en_out

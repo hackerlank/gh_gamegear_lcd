@@ -11,18 +11,16 @@ blue_out[3] <= <GND>
 blue_out[2] <= <GND>
 blue_out[1] <= <GND>
 blue_out[0] <= <GND>
-d[3] => ~NO_FANOUT~
-d[2] => ~NO_FANOUT~
-d[1] => ~NO_FANOUT~
-d[0] => ~NO_FANOUT~
+d_in[3] => ~NO_FANOUT~
+d_in[2] => ~NO_FANOUT~
+d_in[1] => ~NO_FANOUT~
+d_in[0] => ~NO_FANOUT~
 csync => ~NO_FANOUT~
 hsync => ~NO_FANOUT~
 pix_clk => ~NO_FANOUT~
 sc_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
-csync_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
-oe => ~NO_FANOUT~
-vcc5 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-pix_clk_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
-d3_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+cs_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+en_in => ~NO_FANOUT~
+en_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 

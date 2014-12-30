@@ -61,51 +61,51 @@
  ---------------------------------------------------------------------------------
 
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
-CHIP  "GG_AV"  ASSIGNED TO AN: EPM3032ALC44-10
+CHIP  "GG_AV"  ASSIGNED TO AN: EPM3032ATC44-10
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-GND+                         : 1         :        :                   :         :           :                
-GND+                         : 2         :        :                   :         :           :                
-VCCINT                       : 3         : power  :                   : 3.3V    :           :                
-red_out[3]                   : 4         : output : 3.3-V LVTTL       :         :           : N              
-red_out[2]                   : 5         : output : 3.3-V LVTTL       :         :           : N              
-red_out[1]                   : 6         : output : 3.3-V LVTTL       :         :           : N              
-TDI                          : 7         : input  : 3.3-V LVTTL       :         :           : N              
-red_out[0]                   : 8         : output : 3.3-V LVTTL       :         :           : N              
-green_out[3]                 : 9         : output : 3.3-V LVTTL       :         :           : N              
-GND                          : 10        : gnd    :                   :         :           :                
-green_out[2]                 : 11        : output : 3.3-V LVTTL       :         :           : N              
-green_out[1]                 : 12        : output : 3.3-V LVTTL       :         :           : N              
-TMS                          : 13        : input  : 3.3-V LVTTL       :         :           : N              
-green_out[0]                 : 14        : output : 3.3-V LVTTL       :         :           : N              
-VCCIO                        : 15        : power  :                   : 3.3V    :           :                
-blue_out[3]                  : 16        : output : 3.3-V LVTTL       :         :           : N              
-GND                          : 17        : gnd    :                   :         :           :                
-blue_out[2]                  : 18        : output : 3.3-V LVTTL       :         :           : N              
-blue_out[1]                  : 19        : output : 3.3-V LVTTL       :         :           : N              
-blue_out[0]                  : 20        : output : 3.3-V LVTTL       :         :           : N              
-sc_out                       : 21        : output : 3.3-V LVTTL       :         :           : N              
-GND                          : 22        : gnd    :                   :         :           :                
-VCCINT                       : 23        : power  :                   : 3.3V    :           :                
-d[3]                         : 24        : input  : 3.3-V LVTTL       :         :           : N              
-oe                           : 25        : input  : 3.3-V LVTTL       :         :           : N              
-d[2]                         : 26        : input  : 3.3-V LVTTL       :         :           : N              
-pix_clk                      : 27        : input  : 3.3-V LVTTL       :         :           : N              
-csync                        : 28        : input  : 3.3-V LVTTL       :         :           : N              
-d[0]                         : 29        : input  : 3.3-V LVTTL       :         :           : N              
+TDI                          : 1         : input  : 3.3-V LVTTL       :         :           : N              
+RESERVED                     : 2         :        :                   :         :           :                
+RESERVED                     : 3         :        :                   :         :           :                
+GND                          : 4         : gnd    :                   :         :           :                
+RESERVED                     : 5         :        :                   :         :           :                
+RESERVED                     : 6         :        :                   :         :           :                
+TMS                          : 7         : input  : 3.3-V LVTTL       :         :           : N              
+blue_out[3]                  : 8         : output : 3.3-V LVTTL       :         :           : Y              
+VCCIO                        : 9         : power  :                   : 3.3V    :           :                
+blue_out[2]                  : 10        : output : 3.3-V LVTTL       :         :           : Y              
+GND                          : 11        : gnd    :                   :         :           :                
+RESERVED                     : 12        :        :                   :         :           :                
+RESERVED                     : 13        :        :                   :         :           :                
+blue_out[1]                  : 14        : output : 3.3-V LVTTL       :         :           : Y              
+blue_out[0]                  : 15        : output : 3.3-V LVTTL       :         :           : Y              
+GND                          : 16        : gnd    :                   :         :           :                
+VCCINT                       : 17        : power  :                   : 3.3V    :           :                
+green_out[3]                 : 18        : output : 3.3-V LVTTL       :         :           : Y              
+green_out[2]                 : 19        : output : 3.3-V LVTTL       :         :           : Y              
+green_out[1]                 : 20        : output : 3.3-V LVTTL       :         :           : Y              
+green_out[0]                 : 21        : output : 3.3-V LVTTL       :         :           : Y              
+sc_out                       : 22        : output : 3.3-V LVTTL       :         :           : Y              
+red_out[3]                   : 23        : output : 3.3-V LVTTL       :         :           : Y              
+GND                          : 24        : gnd    :                   :         :           :                
+red_out[2]                   : 25        : output : 3.3-V LVTTL       :         :           : Y              
+TCK                          : 26        : input  : 3.3-V LVTTL       :         :           : N              
+red_out[1]                   : 27        : output : 3.3-V LVTTL       :         :           : Y              
+red_out[0]                   : 28        : output : 3.3-V LVTTL       :         :           : Y              
+VCCIO                        : 29        : power  :                   : 3.3V    :           :                
 GND                          : 30        : gnd    :                   :         :           :                
-d[1]                         : 31        : input  : 3.3-V LVTTL       :         :           : N              
-TCK                          : 32        : input  : 3.3-V LVTTL       :         :           : N              
-hsync                        : 33        : input  : 3.3-V LVTTL       :         :           : N              
+cs_out                       : 31        : output : 3.3-V LVTTL       :         :           : Y              
+TDO                          : 32        : output : 3.3-V LVTTL       :         :           : N              
+en_out                       : 33        : output : 3.3-V LVTTL       :         :           : Y              
 RESERVED                     : 34        :        :                   :         :           :                
-VCCIO                        : 35        : power  :                   : 3.3V    :           :                
+csync                        : 35        : input  : 3.3-V LVTTL       :         :           : Y              
 GND                          : 36        : gnd    :                   :         :           :                
-d3_out                       : 37        : output : 3.3-V LVTTL       :         :           : N              
-TDO                          : 38        : output : 3.3-V LVTTL       :         :           : N              
-pix_clk_out                  : 39        : output : 3.3-V LVTTL       :         :           : N              
-vcc5                         : 40        : output : 3.3-V LVTTL       :         :           : N              
-csync_out                    : 41        : output : 3.3-V LVTTL       :         :           : N              
-GND                          : 42        : gnd    :                   :         :           :                
-GND+                         : 43        :        :                   :         :           :                
-GND+                         : 44        :        :                   :         :           :                
+pix_clk                      : 37        : input  : 3.3-V LVTTL       :         :           : Y              
+en_in                        : 38        : input  : 3.3-V LVTTL       :         :           : Y              
+hsync                        : 39        : input  : 3.3-V LVTTL       :         :           : Y              
+d_in[3]                      : 40        : input  : 3.3-V LVTTL       :         :           : Y              
+VCCINT                       : 41        : power  :                   : 3.3V    :           :                
+d_in[2]                      : 42        : input  : 3.3-V LVTTL       :         :           : Y              
+d_in[1]                      : 43        : input  : 3.3-V LVTTL       :         :           : Y              
+d_in[0]                      : 44        : input  : 3.3-V LVTTL       :         :           : Y              
