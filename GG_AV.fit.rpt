@@ -1,5 +1,5 @@
 Fitter report for GG_AV
-Tue Dec 30 19:21:57 2014
+Wed Dec 31 17:43:08 2014
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -19,12 +19,14 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
  11. Dedicated Inputs I/O
  12. Output Pin Default Load For Reported TCO
  13. Fitter Resource Utilization by Entity
- 14. Non-Global High Fan-Out Signals
- 15. Interconnect Usage Summary
- 16. LAB Macrocells
- 17. Logic Cell Interconnection
- 18. Fitter Device Options
- 19. Fitter Messages
+ 14. Control Signals
+ 15. Global & Other Fast Signals
+ 16. Non-Global High Fan-Out Signals
+ 17. Interconnect Usage Summary
+ 18. LAB Macrocells
+ 19. Logic Cell Interconnection
+ 20. Fitter Device Options
+ 21. Fitter Messages
 
 
 
@@ -50,14 +52,14 @@ applicable agreement for further details.
 +------------------------------------------------------------------+
 ; Fitter Summary                                                   ;
 +-----------------------+------------------------------------------+
-; Fitter Status         ; Successful - Tue Dec 30 19:21:57 2014    ;
+; Fitter Status         ; Successful - Wed Dec 31 17:43:08 2014    ;
 ; Quartus II Version    ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name         ; GG_AV                                    ;
 ; Top-level Entity Name ; GG_AV                                    ;
 ; Family                ; MAX3000A                                 ;
 ; Device                ; EPM3032ATC44-10                          ;
 ; Timing Models         ; Final                                    ;
-; Total macrocells      ; 15 / 32 ( 47 % )                         ;
+; Total macrocells      ; 21 / 32 ( 66 % )                         ;
 ; Total pins            ; 27 / 34 ( 79 % )                         ;
 +-----------------------+------------------------------------------+
 
@@ -112,23 +114,23 @@ The pin-out file can be found in C:/Documents and Settings/Administrator/gamegea
 +-----------------------------------+------------------+
 ; Resource                          ; Usage            ;
 +-----------------------------------+------------------+
-; Logic cells                       ; 15 / 32 ( 47 % ) ;
-; Registers                         ; 0 / 32 ( 0 % )   ;
-; Number of pterms used             ; 0                ;
+; Logic cells                       ; 21 / 32 ( 66 % ) ;
+; Registers                         ; 20 / 32 ( 63 % ) ;
+; Number of pterms used             ; 33               ;
 ; User inserted logic elements      ; 0                ;
 ; I/O pins                          ; 27 / 34 ( 79 % ) ;
 ;     -- Clock pins                 ; 2 / 2 ( 100 % )  ;
 ;     -- Dedicated input pins       ; 2 / 2 ( 100 % )  ;
-; Global signals                    ; 0                ;
+; Global signals                    ; 1                ;
 ; Shareable expanders               ; 0 / 32 ( 0 % )   ;
 ; Parallel expanders                ; 0 / 30 ( 0 % )   ;
-; Cells using turbo bit             ; 15 / 32 ( 47 % ) ;
-; Maximum fan-out node              ; ~GND~0           ;
-; Maximum fan-out                   ; 1                ;
-; Highest non-global fan-out signal ; ~GND~0           ;
-; Highest non-global fan-out        ; 1                ;
-; Total fan-out                     ; 15               ;
-; Average fan-out                   ; 0.36             ;
+; Cells using turbo bit             ; 21 / 32 ( 66 % ) ;
+; Maximum fan-out node              ; pix_clk          ;
+; Maximum fan-out                   ; 8                ;
+; Highest non-global fan-out signal ; ffb              ;
+; Highest non-global fan-out        ; 5                ;
+; Total fan-out                     ; 60               ;
+; Average fan-out                   ; 1.25             ;
 +-----------------------------------+------------------+
 
 
@@ -137,14 +139,14 @@ The pin-out file can be found in C:/Documents and Settings/Administrator/gamegea
 +---------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
 ; Name    ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; I/O Standard ; Location assigned by ;
 +---------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
-; csync   ; 35    ; --       ; 2   ; 0                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; d_in[0] ; 44    ; --       ; 1   ; 0                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; d_in[1] ; 43    ; --       ; 1   ; 0                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; d_in[2] ; 42    ; --       ; 1   ; 0                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; d_in[3] ; 40    ; --       ; --  ; 0                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; csync   ; 35    ; --       ; 2   ; 1                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; d_in[0] ; 44    ; --       ; 1   ; 3                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; d_in[1] ; 43    ; --       ; 1   ; 3                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; d_in[2] ; 42    ; --       ; 1   ; 3                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; d_in[3] ; 40    ; --       ; --  ; 3                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
 ; en_in   ; 38    ; --       ; --  ; 0                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; hsync   ; 39    ; --       ; --  ; 0                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; pix_clk ; 37    ; --       ; --  ; 0                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; hsync   ; 39    ; --       ; --  ; 3                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; pix_clk ; 37    ; --       ; --  ; 8                     ; 0                  ; yes    ; 3.3-V LVTTL  ; User                 ;
 +---------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
 
 
@@ -263,84 +265,128 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+------------+------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+------------+------+---------------------+--------------+
-; |GG_AV                     ; 15         ; 27   ; |GG_AV              ; work         ;
+; |GG_AV                     ; 21         ; 27   ; |GG_AV              ; work         ;
 +----------------------------+------------+------+---------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Control Signals                                                                         ;
++---------+----------+---------+-------+--------+----------------------+------------------+
+; Name    ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ;
++---------+----------+---------+-------+--------+----------------------+------------------+
+; ffa     ; LC13     ; 5       ; Clock ; no     ; --                   ; --               ;
+; ffb     ; LC20     ; 5       ; Clock ; no     ; --                   ; --               ;
+; ffc     ; LC25     ; 5       ; Clock ; no     ; --                   ; --               ;
+; pix_clk ; PIN_37   ; 8       ; Clock ; yes    ; On                   ; --               ;
++---------+----------+---------+-------+--------+----------------------+------------------+
+
+
++------------------------------------------------------------------------+
+; Global & Other Fast Signals                                            ;
++---------+----------+---------+----------------------+------------------+
+; Name    ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
++---------+----------+---------+----------------------+------------------+
+; pix_clk ; PIN_37   ; 8       ; On                   ; --               ;
++---------+----------+---------+----------------------+------------------+
 
 
 +---------------------------------+
 ; Non-Global High Fan-Out Signals ;
-+---------+-----------------------+
-; Name    ; Fan-Out               ;
-+---------+-----------------------+
-; ~GND~14 ; 1                     ;
-; ~GND~13 ; 1                     ;
-; ~GND~12 ; 1                     ;
-; ~GND~11 ; 1                     ;
-; ~GND~10 ; 1                     ;
-; ~GND~9  ; 1                     ;
-; ~GND~8  ; 1                     ;
-; ~GND~7  ; 1                     ;
-; ~GND~6  ; 1                     ;
-; ~GND~5  ; 1                     ;
-; ~GND~4  ; 1                     ;
-; ~GND~3  ; 1                     ;
-; ~GND~2  ; 1                     ;
-; ~GND~1  ; 1                     ;
-; ~GND~0  ; 1                     ;
-+---------+-----------------------+
++-------------------+-------------+
+; Name              ; Fan-Out     ;
++-------------------+-------------+
+; ffa               ; 5           ;
+; ffc               ; 5           ;
+; ffb               ; 5           ;
+; hsync             ; 3           ;
+; d_in[0]           ; 3           ;
+; d_in[1]           ; 3           ;
+; d_in[2]           ; 3           ;
+; d_in[3]           ; 3           ;
+; cnt[0]            ; 3           ;
+; cnt[1]            ; 2           ;
+; csync             ; 1           ;
+; ~VCC~0            ; 1           ;
+; sc_out~reg0       ; 1           ;
+; cnt[2]            ; 1           ;
+; red_out[0]~reg0   ; 1           ;
+; red_out[1]~reg0   ; 1           ;
+; red_out[2]~reg0   ; 1           ;
+; red_out[3]~reg0   ; 1           ;
+; blue_out[0]~reg0  ; 1           ;
+; blue_out[1]~reg0  ; 1           ;
+; blue_out[2]~reg0  ; 1           ;
+; blue_out[3]~reg0  ; 1           ;
+; green_out[0]~reg0 ; 1           ;
+; green_out[1]~reg0 ; 1           ;
+; green_out[2]~reg0 ; 1           ;
+; green_out[3]~reg0 ; 1           ;
+; cs_out~reg0       ; 1           ;
++-------------------+-------------+
 
 
-+---------------------------------------------+
-; Interconnect Usage Summary                  ;
-+----------------------------+----------------+
-; Interconnect Resource Type ; Usage          ;
-+----------------------------+----------------+
-; Output enables             ; 0 / 6 ( 0 % )  ;
-; PIA buffers                ; 0 / 72 ( 0 % ) ;
-+----------------------------+----------------+
++-----------------------------------------------+
+; Interconnect Usage Summary                    ;
++----------------------------+------------------+
+; Interconnect Resource Type ; Usage            ;
++----------------------------+------------------+
+; Output enables             ; 0 / 6 ( 0 % )    ;
+; PIA buffers                ; 17 / 72 ( 24 % ) ;
++----------------------------+------------------+
 
 
-+----------------------------------------------------------------------+
-; LAB Macrocells                                                       ;
-+----------------------------------------+-----------------------------+
-; Number of Macrocells  (Average = 7.50) ; Number of LABs  (Total = 2) ;
-+----------------------------------------+-----------------------------+
-; 0                                      ; 0                           ;
-; 1                                      ; 0                           ;
-; 2                                      ; 0                           ;
-; 3                                      ; 0                           ;
-; 4                                      ; 1                           ;
-; 5                                      ; 0                           ;
-; 6                                      ; 0                           ;
-; 7                                      ; 0                           ;
-; 8                                      ; 0                           ;
-; 9                                      ; 0                           ;
-; 10                                     ; 0                           ;
-; 11                                     ; 1                           ;
-+----------------------------------------+-----------------------------+
++-----------------------------------------------------------------------+
+; LAB Macrocells                                                        ;
++-----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 10.50) ; Number of LABs  (Total = 2) ;
++-----------------------------------------+-----------------------------+
+; 0                                       ; 0                           ;
+; 1                                       ; 0                           ;
+; 2                                       ; 0                           ;
+; 3                                       ; 0                           ;
+; 4                                       ; 0                           ;
+; 5                                       ; 1                           ;
+; 6                                       ; 0                           ;
+; 7                                       ; 0                           ;
+; 8                                       ; 0                           ;
+; 9                                       ; 0                           ;
+; 10                                      ; 0                           ;
+; 11                                      ; 0                           ;
+; 12                                      ; 0                           ;
+; 13                                      ; 0                           ;
+; 14                                      ; 0                           ;
+; 15                                      ; 0                           ;
+; 16                                      ; 1                           ;
++-----------------------------------------+-----------------------------+
 
 
-+-----------------------------------------+
-; Logic Cell Interconnection              ;
-+-----+------------+-------+--------------+
-; LAB ; Logic Cell ; Input ; Output       ;
-+-----+------------+-------+--------------+
-;  A  ; LC10       ;       ; blue_out[3]  ;
-;  A  ; LC11       ;       ; blue_out[2]  ;
-;  A  ; LC15       ;       ; blue_out[1]  ;
-;  A  ; LC16       ;       ; blue_out[0]  ;
-;  B  ; LC27       ;       ; red_out[3]   ;
-;  B  ; LC26       ;       ; red_out[2]   ;
-;  B  ; LC24       ;       ; red_out[1]   ;
-;  B  ; LC23       ;       ; red_out[0]   ;
-;  B  ; LC32       ;       ; green_out[3] ;
-;  B  ; LC31       ;       ; green_out[2] ;
-;  B  ; LC30       ;       ; green_out[1] ;
-;  B  ; LC29       ;       ; green_out[0] ;
-;  B  ; LC28       ;       ; sc_out       ;
-;  B  ; LC21       ;       ; cs_out       ;
-;  B  ; LC19       ;       ; en_out       ;
-+-----+------------+-------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                           ;
++-----+------------+---------------------------------+---------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                           ; Output                                                                          ;
++-----+------------+---------------------------------+---------------------------------------------------------------------------------+
+;  A  ; LC10       ; d_in[3], ffc                    ; blue_out[3]                                                                     ;
+;  A  ; LC11       ; d_in[2], ffc                    ; blue_out[2]                                                                     ;
+;  A  ; LC15       ; d_in[1], ffc                    ; blue_out[1]                                                                     ;
+;  A  ; LC16       ; d_in[0], ffc                    ; blue_out[0]                                                                     ;
+;  A  ; LC13       ; pix_clk, ffc, hsync             ; ffb, red_out[3]~reg0, red_out[2]~reg0, red_out[1]~reg0, red_out[0]~reg0         ;
+;  B  ; LC21       ; pix_clk, csync                  ; cs_out                                                                          ;
+;  B  ; LC20       ; pix_clk, ffa, hsync             ; green_out[3]~reg0, green_out[2]~reg0, green_out[1]~reg0, green_out[0]~reg0, ffc ;
+;  B  ; LC22       ; pix_clk                         ; cnt[1], cnt[2], sc_out~reg0                                                     ;
+;  B  ; LC32       ; d_in[3], ffb                    ; green_out[3]                                                                    ;
+;  B  ; LC31       ; d_in[2], ffb                    ; green_out[2]                                                                    ;
+;  B  ; LC30       ; d_in[1], ffb                    ; green_out[1]                                                                    ;
+;  B  ; LC29       ; d_in[0], ffb                    ; green_out[0]                                                                    ;
+;  B  ; LC25       ; pix_clk, ffb, hsync             ; blue_out[3]~reg0, blue_out[2]~reg0, blue_out[1]~reg0, blue_out[0]~reg0, ffa     ;
+;  B  ; LC17       ; pix_clk, cnt[0]                 ; cnt[2], sc_out~reg0                                                             ;
+;  B  ; LC27       ; d_in[3], ffa                    ; red_out[3]                                                                      ;
+;  B  ; LC26       ; d_in[2], ffa                    ; red_out[2]                                                                      ;
+;  B  ; LC24       ; d_in[1], ffa                    ; red_out[1]                                                                      ;
+;  B  ; LC23       ; d_in[0], ffa                    ; red_out[0]                                                                      ;
+;  B  ; LC18       ; pix_clk, cnt[0], cnt[1]         ; sc_out~reg0                                                                     ;
+;  B  ; LC28       ; pix_clk, cnt[2], cnt[0], cnt[1] ; sc_out                                                                          ;
+;  B  ; LC19       ;                                 ; en_out                                                                          ;
++-----+------------+---------------------------------+---------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------+
@@ -364,13 +410,13 @@ Note: User assignments will override these defaults. The user specified values a
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Tue Dec 30 19:21:57 2014
+    Info: Processing started: Wed Dec 31 17:43:08 2014
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off GG_AV -c GG_AV
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Selected device EPM3032ATC44-10 for design "GG_AV"
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 156 megabytes
-    Info: Processing ended: Tue Dec 30 19:21:57 2014
+    Info: Processing ended: Wed Dec 31 17:43:08 2014
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

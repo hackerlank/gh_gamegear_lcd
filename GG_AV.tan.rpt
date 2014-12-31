@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for GG_AV
-Tue Dec 30 19:22:01 2014
+Wed Dec 31 17:43:12 2014
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -7,9 +7,15 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Timing Analyzer Settings
-  3. Parallel Compilation
-  4. Timing Analyzer Messages
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'pix_clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
 
 
 
@@ -30,6 +36,19 @@ programming logic devices manufactured by Altera and sold by
 Altera or its authorized distributors.  Please refer to the 
 applicable agreement for further details.
 
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                              ;
++------------------------------+-------+---------------+----------------------------------+-------------------+-----------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From              ; To              ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-------------------+-----------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 6.400 ns                         ; hsync             ; ffc             ; --         ; pix_clk  ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 12.800 ns                        ; green_out[3]~reg0 ; green_out[3]    ; pix_clk    ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 3.800 ns                         ; d_in[3]           ; red_out[3]~reg0 ; --         ; pix_clk  ; 0            ;
+; Clock Setup: 'pix_clk'       ; N/A   ; None          ; 103.09 MHz ( period = 9.700 ns ) ; cnt[2]            ; sc_out~reg0     ; pix_clk    ; pix_clk  ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                   ;                 ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-------------------+-----------------+------------+----------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -64,6 +83,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; pix_clk         ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
 +------------------------------------------+
 ; Parallel Compilation                     ;
 +----------------------------+-------------+
@@ -81,22 +109,170 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'pix_clk'                                                                                                                                                      ;
++-------+----------------------------------+--------+-------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)             ; From   ; To          ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+----------------------------------+--------+-------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 103.09 MHz ( period = 9.700 ns ) ; ffa    ; ffb         ; pix_clk    ; pix_clk  ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; 103.09 MHz ( period = 9.700 ns ) ; ffc    ; ffa         ; pix_clk    ; pix_clk  ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; 103.09 MHz ( period = 9.700 ns ) ; ffb    ; ffc         ; pix_clk    ; pix_clk  ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; 103.09 MHz ( period = 9.700 ns ) ; cnt[0] ; cnt[0]      ; pix_clk    ; pix_clk  ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; 103.09 MHz ( period = 9.700 ns ) ; cnt[0] ; cnt[1]      ; pix_clk    ; pix_clk  ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; 103.09 MHz ( period = 9.700 ns ) ; cnt[1] ; cnt[1]      ; pix_clk    ; pix_clk  ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; 103.09 MHz ( period = 9.700 ns ) ; cnt[0] ; cnt[2]      ; pix_clk    ; pix_clk  ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; 103.09 MHz ( period = 9.700 ns ) ; cnt[1] ; cnt[2]      ; pix_clk    ; pix_clk  ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; 103.09 MHz ( period = 9.700 ns ) ; cnt[2] ; cnt[2]      ; pix_clk    ; pix_clk  ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; 103.09 MHz ( period = 9.700 ns ) ; cnt[0] ; sc_out~reg0 ; pix_clk    ; pix_clk  ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; 103.09 MHz ( period = 9.700 ns ) ; cnt[1] ; sc_out~reg0 ; pix_clk    ; pix_clk  ; None                        ; None                      ; 5.400 ns                ;
+; N/A   ; 103.09 MHz ( period = 9.700 ns ) ; cnt[2] ; sc_out~reg0 ; pix_clk    ; pix_clk  ; None                        ; None                      ; 5.400 ns                ;
++-------+----------------------------------+--------+-------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------+
+; tsu                                                                        ;
++-------+--------------+------------+---------+-------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From    ; To                ; To Clock ;
++-------+--------------+------------+---------+-------------------+----------+
+; N/A   ; None         ; 6.400 ns   ; hsync   ; ffb               ; pix_clk  ;
+; N/A   ; None         ; 6.400 ns   ; hsync   ; ffa               ; pix_clk  ;
+; N/A   ; None         ; 6.400 ns   ; hsync   ; ffc               ; pix_clk  ;
+; N/A   ; None         ; 6.300 ns   ; csync   ; cs_out~reg0       ; pix_clk  ;
+; N/A   ; None         ; 0.300 ns   ; d_in[0] ; green_out[0]~reg0 ; pix_clk  ;
+; N/A   ; None         ; 0.300 ns   ; d_in[0] ; blue_out[0]~reg0  ; pix_clk  ;
+; N/A   ; None         ; 0.300 ns   ; d_in[0] ; red_out[0]~reg0   ; pix_clk  ;
+; N/A   ; None         ; 0.300 ns   ; d_in[1] ; green_out[1]~reg0 ; pix_clk  ;
+; N/A   ; None         ; 0.300 ns   ; d_in[1] ; blue_out[1]~reg0  ; pix_clk  ;
+; N/A   ; None         ; 0.300 ns   ; d_in[1] ; red_out[1]~reg0   ; pix_clk  ;
+; N/A   ; None         ; 0.300 ns   ; d_in[2] ; green_out[2]~reg0 ; pix_clk  ;
+; N/A   ; None         ; 0.300 ns   ; d_in[2] ; blue_out[2]~reg0  ; pix_clk  ;
+; N/A   ; None         ; 0.300 ns   ; d_in[2] ; red_out[2]~reg0   ; pix_clk  ;
+; N/A   ; None         ; 0.300 ns   ; d_in[3] ; green_out[3]~reg0 ; pix_clk  ;
+; N/A   ; None         ; 0.300 ns   ; d_in[3] ; blue_out[3]~reg0  ; pix_clk  ;
+; N/A   ; None         ; 0.300 ns   ; d_in[3] ; red_out[3]~reg0   ; pix_clk  ;
++-------+--------------+------------+---------+-------------------+----------+
+
+
++-----------------------------------------------------------------------------------+
+; tco                                                                               ;
++-------+--------------+------------+-------------------+--------------+------------+
+; Slack ; Required tco ; Actual tco ; From              ; To           ; From Clock ;
++-------+--------------+------------+-------------------+--------------+------------+
+; N/A   ; None         ; 12.800 ns  ; red_out[0]~reg0   ; red_out[0]   ; pix_clk    ;
+; N/A   ; None         ; 12.800 ns  ; red_out[1]~reg0   ; red_out[1]   ; pix_clk    ;
+; N/A   ; None         ; 12.800 ns  ; red_out[2]~reg0   ; red_out[2]   ; pix_clk    ;
+; N/A   ; None         ; 12.800 ns  ; red_out[3]~reg0   ; red_out[3]   ; pix_clk    ;
+; N/A   ; None         ; 12.800 ns  ; blue_out[0]~reg0  ; blue_out[0]  ; pix_clk    ;
+; N/A   ; None         ; 12.800 ns  ; blue_out[1]~reg0  ; blue_out[1]  ; pix_clk    ;
+; N/A   ; None         ; 12.800 ns  ; blue_out[2]~reg0  ; blue_out[2]  ; pix_clk    ;
+; N/A   ; None         ; 12.800 ns  ; blue_out[3]~reg0  ; blue_out[3]  ; pix_clk    ;
+; N/A   ; None         ; 12.800 ns  ; green_out[0]~reg0 ; green_out[0] ; pix_clk    ;
+; N/A   ; None         ; 12.800 ns  ; green_out[1]~reg0 ; green_out[1] ; pix_clk    ;
+; N/A   ; None         ; 12.800 ns  ; green_out[2]~reg0 ; green_out[2] ; pix_clk    ;
+; N/A   ; None         ; 12.800 ns  ; green_out[3]~reg0 ; green_out[3] ; pix_clk    ;
+; N/A   ; None         ; 6.700 ns   ; sc_out~reg0       ; sc_out       ; pix_clk    ;
+; N/A   ; None         ; 6.700 ns   ; cs_out~reg0       ; cs_out       ; pix_clk    ;
++-------+--------------+------------+-------------------+--------------+------------+
+
+
++----------------------------------------------------------------------------------+
+; th                                                                               ;
++---------------+-------------+-----------+---------+-------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From    ; To                ; To Clock ;
++---------------+-------------+-----------+---------+-------------------+----------+
+; N/A           ; None        ; 3.800 ns  ; d_in[0] ; green_out[0]~reg0 ; pix_clk  ;
+; N/A           ; None        ; 3.800 ns  ; d_in[0] ; blue_out[0]~reg0  ; pix_clk  ;
+; N/A           ; None        ; 3.800 ns  ; d_in[0] ; red_out[0]~reg0   ; pix_clk  ;
+; N/A           ; None        ; 3.800 ns  ; d_in[1] ; green_out[1]~reg0 ; pix_clk  ;
+; N/A           ; None        ; 3.800 ns  ; d_in[1] ; blue_out[1]~reg0  ; pix_clk  ;
+; N/A           ; None        ; 3.800 ns  ; d_in[1] ; red_out[1]~reg0   ; pix_clk  ;
+; N/A           ; None        ; 3.800 ns  ; d_in[2] ; green_out[2]~reg0 ; pix_clk  ;
+; N/A           ; None        ; 3.800 ns  ; d_in[2] ; blue_out[2]~reg0  ; pix_clk  ;
+; N/A           ; None        ; 3.800 ns  ; d_in[2] ; red_out[2]~reg0   ; pix_clk  ;
+; N/A           ; None        ; 3.800 ns  ; d_in[3] ; green_out[3]~reg0 ; pix_clk  ;
+; N/A           ; None        ; 3.800 ns  ; d_in[3] ; blue_out[3]~reg0  ; pix_clk  ;
+; N/A           ; None        ; 3.800 ns  ; d_in[3] ; red_out[3]~reg0   ; pix_clk  ;
+; N/A           ; None        ; -2.200 ns ; csync   ; cs_out~reg0       ; pix_clk  ;
+; N/A           ; None        ; -2.300 ns ; hsync   ; ffb               ; pix_clk  ;
+; N/A           ; None        ; -2.300 ns ; hsync   ; ffa               ; pix_clk  ;
+; N/A           ; None        ; -2.300 ns ; hsync   ; ffc               ; pix_clk  ;
++---------------+-------------+-----------+---------+-------------------+----------+
+
+
 +--------------------------+
 ; Timing Analyzer Messages ;
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Tue Dec 30 19:22:01 2014
+    Info: Processing started: Wed Dec 31 17:43:12 2014
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off GG_AV -c GG_AV
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Warning: Timing Analysis does not support the analysis of latches as synchronous elements for the currently selected device family
-Warning: No paths found for timing analysis
-Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 123 megabytes
-    Info: Processing ended: Tue Dec 30 19:22:01 2014
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "pix_clk" is an undefined clock
+Warning: Found 3 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "ffc" as buffer
+    Info: Detected ripple clock "ffa" as buffer
+    Info: Detected ripple clock "ffb" as buffer
+Info: Clock "pix_clk" has Internal fmax of 103.09 MHz between source register "ffa" and destination register "ffb" (period= 9.7 ns)
+    Info: + Longest register to register delay is 5.400 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC13; Fanout = 5; REG Node = 'ffa'
+        Info: 2: + IC(2.100 ns) + CELL(3.300 ns) = 5.400 ns; Loc. = LC20; Fanout = 5; REG Node = 'ffb'
+        Info: Total cell delay = 3.300 ns ( 61.11 % )
+        Info: Total interconnect delay = 2.100 ns ( 38.89 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "pix_clk" to destination register is 3.400 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.100 ns) = 2.100 ns; Loc. = PIN_37; Fanout = 8; CLK Node = 'pix_clk'
+            Info: 2: + IC(0.000 ns) + CELL(1.300 ns) = 3.400 ns; Loc. = LC20; Fanout = 5; REG Node = 'ffb'
+            Info: Total cell delay = 3.400 ns ( 100.00 % )
+        Info: - Longest clock path from clock "pix_clk" to source register is 3.400 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.100 ns) = 2.100 ns; Loc. = PIN_37; Fanout = 8; CLK Node = 'pix_clk'
+            Info: 2: + IC(0.000 ns) + CELL(1.300 ns) = 3.400 ns; Loc. = LC13; Fanout = 5; REG Node = 'ffa'
+            Info: Total cell delay = 3.400 ns ( 100.00 % )
+    Info: + Micro clock to output delay of source is 1.500 ns
+    Info: + Micro setup delay of destination is 2.800 ns
+Info: tsu for register "ffb" (data pin = "hsync", clock pin = "pix_clk") is 6.400 ns
+    Info: + Longest pin to register delay is 7.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.100 ns) = 2.100 ns; Loc. = PIN_39; Fanout = 3; PIN Node = 'hsync'
+        Info: 2: + IC(1.600 ns) + CELL(3.300 ns) = 7.000 ns; Loc. = LC20; Fanout = 5; REG Node = 'ffb'
+        Info: Total cell delay = 5.400 ns ( 77.14 % )
+        Info: Total interconnect delay = 1.600 ns ( 22.86 % )
+    Info: + Micro setup delay of destination is 2.800 ns
+    Info: - Shortest clock path from clock "pix_clk" to destination register is 3.400 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.100 ns) = 2.100 ns; Loc. = PIN_37; Fanout = 8; CLK Node = 'pix_clk'
+        Info: 2: + IC(0.000 ns) + CELL(1.300 ns) = 3.400 ns; Loc. = LC20; Fanout = 5; REG Node = 'ffb'
+        Info: Total cell delay = 3.400 ns ( 100.00 % )
+Info: tco from clock "pix_clk" to destination pin "red_out[0]" through register "red_out[0]~reg0" is 12.800 ns
+    Info: + Longest clock path from clock "pix_clk" to source register is 9.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.100 ns) = 2.100 ns; Loc. = PIN_37; Fanout = 8; CLK Node = 'pix_clk'
+        Info: 2: + IC(0.000 ns) + CELL(2.800 ns) = 4.900 ns; Loc. = LC13; Fanout = 5; REG Node = 'ffa'
+        Info: 3: + IC(2.100 ns) + CELL(2.500 ns) = 9.500 ns; Loc. = LC23; Fanout = 1; REG Node = 'red_out[0]~reg0'
+        Info: Total cell delay = 7.400 ns ( 77.89 % )
+        Info: Total interconnect delay = 2.100 ns ( 22.11 % )
+    Info: + Micro clock to output delay of source is 1.500 ns
+    Info: + Longest register to pin delay is 1.800 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC23; Fanout = 1; REG Node = 'red_out[0]~reg0'
+        Info: 2: + IC(0.000 ns) + CELL(1.800 ns) = 1.800 ns; Loc. = PIN_28; Fanout = 0; PIN Node = 'red_out[0]'
+        Info: Total cell delay = 1.800 ns ( 100.00 % )
+Info: th for register "green_out[0]~reg0" (data pin = "d_in[0]", clock pin = "pix_clk") is 3.800 ns
+    Info: + Longest clock path from clock "pix_clk" to destination register is 9.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.100 ns) = 2.100 ns; Loc. = PIN_37; Fanout = 8; CLK Node = 'pix_clk'
+        Info: 2: + IC(0.000 ns) + CELL(2.800 ns) = 4.900 ns; Loc. = LC20; Fanout = 5; REG Node = 'ffb'
+        Info: 3: + IC(2.100 ns) + CELL(2.500 ns) = 9.500 ns; Loc. = LC29; Fanout = 1; REG Node = 'green_out[0]~reg0'
+        Info: Total cell delay = 7.400 ns ( 77.89 % )
+        Info: Total interconnect delay = 2.100 ns ( 22.11 % )
+    Info: + Micro hold delay of destination is 1.300 ns
+    Info: - Shortest pin to register delay is 7.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_44; Fanout = 3; PIN Node = 'd_in[0]'
+        Info: 2: + IC(2.200 ns) + CELL(3.300 ns) = 7.000 ns; Loc. = LC29; Fanout = 1; REG Node = 'green_out[0]~reg0'
+        Info: Total cell delay = 4.800 ns ( 68.57 % )
+        Info: Total interconnect delay = 2.200 ns ( 31.43 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 124 megabytes
+    Info: Processing ended: Wed Dec 31 17:43:12 2014
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

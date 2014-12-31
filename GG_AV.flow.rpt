@@ -1,5 +1,5 @@
 Flow report for GG_AV
-Tue Dec 30 19:22:01 2014
+Wed Dec 31 17:43:12 2014
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------+
 ; Flow Summary                                                       ;
 +-------------------------+------------------------------------------+
-; Flow Status             ; Successful - Tue Dec 30 19:22:01 2014    ;
+; Flow Status             ; Successful - Wed Dec 31 17:43:12 2014    ;
 ; Quartus II Version      ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name           ; GG_AV                                    ;
 ; Top-level Entity Name   ; GG_AV                                    ;
@@ -46,7 +46,7 @@ applicable agreement for further details.
 ; Device                  ; EPM3032ATC44-10                          ;
 ; Timing Models           ; Final                                    ;
 ; Met timing requirements ; Yes                                      ;
-; Total macrocells        ; 15 / 32 ( 47 % )                         ;
+; Total macrocells        ; 21 / 32 ( 66 % )                         ;
 ; Total pins              ; 27 / 34 ( 79 % )                         ;
 +-------------------------+------------------------------------------+
 
@@ -56,7 +56,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/30/2014 19:21:54 ;
+; Start date & time ; 12/31/2014 17:43:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; GG_AV               ;
 +-------------------+---------------------+
@@ -67,7 +67,7 @@ applicable agreement for further details.
 +------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 52234081909.141993851303628                                     ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 52234081909.142001898401196                                     ; --            ; --          ; --             ;
 ; MISC_FILE                          ; C:/Documents and Settings/Administrator/Desktop/GG_AV/GG_AV.dpf ; --            ; --          ; --             ;
 ; MISC_FILE                          ; C:/Documents and Settings/Administrator/gamegear_av/GG_AV.dpf   ; --            ; --          ; --             ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                             ; --            ; --          ; eda_blast_fpga ;
