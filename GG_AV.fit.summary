@@ -1,9 +1,9 @@
-Fitter Status : Successful - Wed Dec 31 17:43:08 2014
+Fitter Status : Failed - Fri Jan 02 07:44:27 2015
 Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
 Revision Name : GG_AV
 Top-level Entity Name : GG_AV
 Family : MAX3000A
 Device : EPM3032ATC44-10
 Timing Models : Final
-Total macrocells : 21 / 32 ( 66 % )
+Total macrocells : 33 / 32 ( 103 % )
 Total pins : 27 / 34 ( 79 % )

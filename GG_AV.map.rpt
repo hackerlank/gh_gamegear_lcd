@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GG_AV
-Wed Dec 31 17:43:06 2014
+Fri Jan 02 07:44:24 2015
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -9,12 +9,11 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Analysis & Synthesis Messages
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. Analysis & Synthesis Messages
 
 
 
@@ -40,12 +39,12 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Dec 31 17:43:05 2014    ;
+; Analysis & Synthesis Status ; Successful - Fri Jan 02 07:44:24 2015    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; GG_AV                                    ;
 ; Top-level Entity Name       ; GG_AV                                    ;
 ; Family                      ; MAX3000A                                 ;
-; Total macrocells            ; 21                                       ;
+; Total macrocells            ; 33                                       ;
 ; Total pins                  ; 23                                       ;
 +-----------------------------+------------------------------------------+
 
@@ -109,30 +108,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+-----------------+---------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     1 processor            ; 100.0%      ;
-;     2-4 processors         ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                               ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                  ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------+
-; GG_AV.vhd                        ; yes             ; User VHDL File  ; C:/Documents and Settings/Administrator/gamegear_av/GG_AV.vhd ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+
+; GG_AV.vhd                        ; yes             ; User VHDL File  ; C:/Documents and Settings/steward/gamegear_av/GG_AV.vhd ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+
 
 
 +---------------------------------------------+
@@ -140,13 +122,13 @@ applicable agreement for further details.
 +----------------------+----------------------+
 ; Resource             ; Usage                ;
 +----------------------+----------------------+
-; Logic cells          ; 21                   ;
-; Total registers      ; 20                   ;
+; Logic cells          ; 33                   ;
+; Total registers      ; 32                   ;
 ; I/O pins             ; 23                   ;
-; Maximum fan-out node ; pix_clk              ;
-; Maximum fan-out      ; 8                    ;
-; Total fan-out        ; 60                   ;
-; Average fan-out      ; 1.36                 ;
+; Maximum fan-out node ; ffb                  ;
+; Maximum fan-out      ; 9                    ;
+; Total fan-out        ; 84                   ;
+; Average fan-out      ; 1.50                 ;
 +----------------------+----------------------+
 
 
@@ -155,7 +137,7 @@ applicable agreement for further details.
 +----------------------------+------------+------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+------------+------+---------------------+--------------+
-; |GG_AV                     ; 21         ; 23   ; |GG_AV              ; work         ;
+; |GG_AV                     ; 33         ; 23   ; |GG_AV              ; work         ;
 +----------------------------+------------+------+---------------------+--------------+
 
 
@@ -176,9 +158,9 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Wed Dec 31 17:43:04 2014
+    Info: Processing started: Fri Jan 02 07:44:20 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GG_AV -c GG_AV
-Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Only one processor detected - disabling parallel compilation
 Info: Found 2 design units, including 1 entities, in source file gg_av.vhd
     Info: Found design unit 1: GG_AV-behavioral
     Info: Found entity 1: GG_AV
@@ -187,16 +169,18 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "en_out" is stuck at VCC
 Info: Promoted pin-driven signal(s) to global signal
     Info: Promoted clock signal driven by pin "pix_clk" to global clock signal
+Info: Promoted pin-driven signal(s) to global signal
+    Info: Promoted clock signal driven by pin "pix_clk" to global clock signal
 Warning: Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "en_in"
-Info: Implemented 44 device resources after synthesis - the final resource count might be different
+Info: Implemented 56 device resources after synthesis - the final resource count might be different
     Info: Implemented 8 input pins
     Info: Implemented 15 output pins
-    Info: Implemented 21 macrocells
+    Info: Implemented 33 macrocells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 179 megabytes
-    Info: Processing ended: Wed Dec 31 17:43:06 2014
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Fri Jan 02 07:44:24 2015
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

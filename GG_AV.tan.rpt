@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for GG_AV
-Wed Dec 31 17:43:12 2014
+Thu Jan 01 18:11:14 2015
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -10,12 +10,11 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
   2. Timing Analyzer Summary
   3. Timing Analyzer Settings
   4. Clock Settings Summary
-  5. Parallel Compilation
-  6. Clock Setup: 'pix_clk'
-  7. tsu
-  8. tco
-  9. th
- 10. Timing Analyzer Messages
+  5. Clock Setup: 'pix_clk'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
 
 
 
@@ -90,23 +89,6 @@ applicable agreement for further details.
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
 ; pix_clk         ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     1 processor            ; 100.0%      ;
-;     2-4 processors         ;   0.0%      ;
-+----------------------------+-------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -205,9 +187,9 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Wed Dec 31 17:43:12 2014
+    Info: Processing started: Thu Jan 01 18:11:13 2015
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off GG_AV -c GG_AV
-Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Only one processor detected - disabling parallel compilation
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Warning: Timing Analysis does not support the analysis of latches as synchronous elements for the currently selected device family
@@ -272,8 +254,8 @@ Info: th for register "green_out[0]~reg0" (data pin = "d_in[0]", clock pin = "pi
         Info: Total interconnect delay = 2.200 ns ( 31.43 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 124 megabytes
-    Info: Processing ended: Wed Dec 31 17:43:12 2014
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Processing ended: Thu Jan 01 18:11:14 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

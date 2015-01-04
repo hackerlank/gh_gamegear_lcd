@@ -1,5 +1,5 @@
 Assembler report for GG_AV
-Wed Dec 31 17:43:10 2014
+Thu Jan 01 18:11:11 2015
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -10,7 +10,7 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Documents and Settings/Administrator/gamegear_av/GG_AV.pof
+  5. Assembler Device Options: C:/Documents and Settings/steward/gamegear_av/GG_AV.pof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Dec 31 17:43:10 2014 ;
+; Assembler Status      ; Successful - Thu Jan 01 18:11:11 2015 ;
 ; Revision Name         ; GG_AV                                 ;
 ; Top-level Entity Name ; GG_AV                                 ;
 ; Family                ; MAX3000A                              ;
@@ -74,24 +74,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+---------------------------------------------------------------+
-; Assembler Generated Files                                     ;
-+---------------------------------------------------------------+
-; File Name                                                     ;
-+---------------------------------------------------------------+
-; C:/Documents and Settings/Administrator/gamegear_av/GG_AV.pof ;
-+---------------------------------------------------------------+
++---------------------------------------------------------+
+; Assembler Generated Files                               ;
++---------------------------------------------------------+
+; File Name                                               ;
++---------------------------------------------------------+
+; C:/Documents and Settings/steward/gamegear_av/GG_AV.pof ;
++---------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Documents and Settings/Administrator/gamegear_av/GG_AV.pof ;
-+----------------+------------------------------------------------------------------------+
-; Option         ; Setting                                                                ;
-+----------------+------------------------------------------------------------------------+
-; Device         ; EPM3032ATC44-10                                                        ;
-; JTAG usercode  ; 0x00000000                                                             ;
-; Checksum       ; 0x0005616C                                                             ;
-+----------------+------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Documents and Settings/steward/gamegear_av/GG_AV.pof ;
++----------------+------------------------------------------------------------------+
+; Option         ; Setting                                                          ;
++----------------+------------------------------------------------------------------+
+; Device         ; EPM3032ATC44-10                                                  ;
+; JTAG usercode  ; 0x00000000                                                       ;
+; Checksum       ; 0x00056160                                                       ;
++----------------+------------------------------------------------------------------+
 
 
 +--------------------+
@@ -100,13 +100,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Wed Dec 31 17:43:10 2014
+    Info: Processing started: Thu Jan 01 18:11:11 2015
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off GG_AV -c GG_AV
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 139 megabytes
-    Info: Processing ended: Wed Dec 31 17:43:10 2014
+    Info: Processing ended: Thu Jan 01 18:11:11 2015
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 
