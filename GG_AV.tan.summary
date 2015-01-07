@@ -7,7 +7,7 @@ Slack          : N/A
 Required Time  : None
 Actual Time    : 6.400 ns
 From           : hsync
-To             : ffc
+To             : blue_out[0]~reg0
 From Clock     : --
 To Clock       : pix_clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 12.800 ns
-From           : green_out[3]~reg0
-To             : green_out[3]
+Actual Time    : 6.700 ns
+From           : cs_out~reg0
+To             : cs_out
 From Clock     : pix_clk
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 3.800 ns
-From           : d_in[3]
-To             : red_out[3]~reg0
+Actual Time    : -0.200 ns
+From           : hsync
+To             : red_out[0]~reg0
 From Clock     : --
 To Clock       : pix_clk
 Failed Paths   : 0
@@ -35,8 +35,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'pix_clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 103.09 MHz ( period = 9.700 ns )
-From           : cnt[2]
+Actual Time    : 102.04 MHz ( period = 9.800 ns )
+From           : cnt[0]
 To             : sc_out~reg0
 From Clock     : pix_clk
 To Clock       : pix_clk

@@ -72,3 +72,10 @@ set_location_assignment PIN_23 -to red_out[3]
 set_location_assignment PIN_22 -to sc_out
 set_location_assignment PIN_38 -to en_in
 set_location_assignment PIN_33 -to en_out
+set_global_assignment -name MISC_FILE "C:/Documents and Settings/steward/gamegear_av/GG_AV.dpf"
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS OFF
+set_global_assignment -name OPTIMIZE_HOLD_TIMING OFF
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name ENABLE_DRC_SETTINGS ON
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name MAX7000_OPTIMIZATION_TECHNIQUE BALANCED

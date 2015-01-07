@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GG_AV
-Fri Jan 02 07:44:24 2015
+Wed Jan 07 22:10:15 2015
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -39,12 +39,12 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Jan 02 07:44:24 2015    ;
+; Analysis & Synthesis Status ; Successful - Wed Jan 07 22:10:15 2015    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; GG_AV                                    ;
 ; Top-level Entity Name       ; GG_AV                                    ;
 ; Family                      ; MAX3000A                                 ;
-; Total macrocells            ; 33                                       ;
+; Total macrocells            ; 28                                       ;
 ; Total pins                  ; 23                                       ;
 +-----------------------------+------------------------------------------+
 
@@ -57,8 +57,9 @@ applicable agreement for further details.
 ; Device                                                                     ; EPM3032ATC44-10 ;               ;
 ; Top-level entity name                                                      ; GG_AV           ; GG_AV         ;
 ; Family name                                                                ; MAX3000A        ; Stratix II    ;
+; Use smart compilation                                                      ; On              ; Off           ;
+; Optimization Technique                                                     ; Balanced        ; Speed         ;
 ; Use Generated Physical Constraints File                                    ; Off             ;               ;
-; Use smart compilation                                                      ; Off             ; Off           ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On              ; On            ;
 ; Enable compact report table                                                ; Off             ; Off           ;
 ; Create Debugging Nodes for IP Cores                                        ; Off             ; Off           ;
@@ -85,7 +86,6 @@ applicable agreement for further details.
 ; Ignore LCELL Buffers                                                       ; Auto            ; Auto          ;
 ; Ignore SOFT Buffers                                                        ; Off             ; Off           ;
 ; Limit AHDL Integers to 32 Bits                                             ; Off             ; Off           ;
-; Optimization Technique                                                     ; Speed           ; Speed         ;
 ; Allow XOR Gate Usage                                                       ; On              ; On            ;
 ; Auto Logic Cell Insertion                                                  ; On              ; On            ;
 ; Parallel Expander Chain Length                                             ; 4               ; 4             ;
@@ -122,13 +122,13 @@ applicable agreement for further details.
 +----------------------+----------------------+
 ; Resource             ; Usage                ;
 +----------------------+----------------------+
-; Logic cells          ; 33                   ;
-; Total registers      ; 32                   ;
+; Logic cells          ; 28                   ;
+; Total registers      ; 27                   ;
 ; I/O pins             ; 23                   ;
-; Maximum fan-out node ; ffb                  ;
-; Maximum fan-out      ; 9                    ;
-; Total fan-out        ; 84                   ;
-; Average fan-out      ; 1.50                 ;
+; Maximum fan-out node ; pix_clk              ;
+; Maximum fan-out      ; 27                   ;
+; Total fan-out        ; 114                  ;
+; Average fan-out      ; 2.24                 ;
 +----------------------+----------------------+
 
 
@@ -137,19 +137,27 @@ applicable agreement for further details.
 +----------------------------+------------+------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+------------+------+---------------------+--------------+
-; |GG_AV                     ; 33         ; 23   ; |GG_AV              ; work         ;
+; |GG_AV                     ; 28         ; 23   ; |GG_AV              ; work         ;
 +----------------------------+------------+------+---------------------+--------------+
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; en_out~reg0                           ; Stuck at VCC due to stuck port data_in ;
-; cnt[3]                                ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
-+---------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; en_out~reg0                            ; Stuck at VCC due to stuck port data_in ;
+; cnt[3]                                 ; Stuck at GND due to stuck port data_in ;
+; ffblue_in[3]                           ; Merged with ffred_in[3]                ;
+; ffgreen_in[3]                          ; Merged with ffred_in[3]                ;
+; ffblue_in[2]                           ; Merged with ffred_in[2]                ;
+; ffgreen_in[2]                          ; Merged with ffred_in[2]                ;
+; ffblue_in[1]                           ; Merged with ffred_in[1]                ;
+; ffgreen_in[1]                          ; Merged with ffred_in[1]                ;
+; ffblue_in[0]                           ; Merged with ffred_in[0]                ;
+; ffgreen_in[0]                          ; Merged with ffred_in[0]                ;
+; Total Number of Removed Registers = 10 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +-------------------------------+
@@ -158,7 +166,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Fri Jan 02 07:44:20 2015
+    Info: Processing started: Wed Jan 07 22:10:11 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GG_AV -c GG_AV
 Info: Only one processor detected - disabling parallel compilation
 Info: Found 2 design units, including 1 entities, in source file gg_av.vhd
@@ -169,17 +177,15 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "en_out" is stuck at VCC
 Info: Promoted pin-driven signal(s) to global signal
     Info: Promoted clock signal driven by pin "pix_clk" to global clock signal
-Info: Promoted pin-driven signal(s) to global signal
-    Info: Promoted clock signal driven by pin "pix_clk" to global clock signal
 Warning: Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "en_in"
-Info: Implemented 56 device resources after synthesis - the final resource count might be different
+Info: Implemented 51 device resources after synthesis - the final resource count might be different
     Info: Implemented 8 input pins
     Info: Implemented 15 output pins
-    Info: Implemented 33 macrocells
+    Info: Implemented 28 macrocells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 179 megabytes
-    Info: Processing ended: Fri Jan 02 07:44:24 2015
+    Info: Peak virtual memory: 186 megabytes
+    Info: Processing ended: Wed Jan 07 22:10:15 2015
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
