@@ -21,24 +21,25 @@ end GG_AV;
 architecture behavioral of GG_AV is
 begin
 	process(pix_clk)
-		variable ffa_in: std_logic;
-		variable ffa_out: std_logic;
-		variable ffb_in: std_logic;
-		variable ffb_out: std_logic;
-		variable ffc_in: std_logic;
-		variable ffc_out: std_logic;
+		variable ffa_in: std_logic := '1';
+		variable ffa_out: std_logic := '1';
 		
-		variable ffred_in: std_logic_vector(0 to 3);
-		variable ffred_out: std_logic_vector(0 to 3);
-		variable ffred_clk: std_logic;		
-		variable ffgreen_in: std_logic_vector(0 to 3);
-		variable ffgreen_out: std_logic_vector(0 to 3);
-		variable ffgreen_clk: std_logic;
-		variable ffblue_in: std_logic_vector(0 to 3);
-		variable ffblue_out: std_logic_vector(0 to 3);
-		variable ffblue_clk: std_logic;
+		variable ffb_in: std_logic := '1';
+		variable ffb_out: std_logic := '1';
 		
-		variable cnt: integer range 0 to 8;	
+		variable ffc_in: std_logic := '1';
+		variable ffc_out: std_logic := '1';
+
+		variable ffred_in: std_logic_vector(0 to 3) := "1111";
+		variable ffred_clk: std_logic := '1';		
+		
+		variable ffgreen_in: std_logic_vector(0 to 3) := "1111";
+		variable ffgreen_clk: std_logic := '1';
+		
+		variable ffblue_in: std_logic_vector(0 to 3) := "1111";
+		variable ffblue_clk: std_logic := '1';
+		
+		variable cnt: integer range 0 to 8 := 0;
 	begin
 		if rising_edge(pix_clk) then
 			ffa_out := ffa_in;
@@ -88,10 +89,6 @@ begin
 			
 			en_out <= '1';
 			cs_out <= csync;
-		
-			--red_out <= ffred_out;
-			--green_out <= ffgreen_out;
-			--blue_out <= ffblue_out;
 		end if;
 	end process;
 end behavioral;

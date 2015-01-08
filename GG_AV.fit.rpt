@@ -1,5 +1,5 @@
 Fitter report for GG_AV
-Wed Jan 07 22:10:18 2015
+Thu Jan 08 23:09:34 2015
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -51,7 +51,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------+
 ; Fitter Summary                                                   ;
 +-----------------------+------------------------------------------+
-; Fitter Status         ; Successful - Wed Jan 07 22:10:18 2015    ;
+; Fitter Status         ; Successful - Thu Jan 08 23:09:34 2015    ;
 ; Quartus II Version    ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name         ; GG_AV                                    ;
 ; Top-level Entity Name ; GG_AV                                    ;
@@ -407,13 +407,13 @@ Note: User assignments will override these defaults. The user specified values a
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Wed Jan 07 22:10:18 2015
+    Info: Processing started: Thu Jan 08 23:09:34 2015
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off GG_AV -c GG_AV
 Info: Only one processor detected - disabling parallel compilation
 Info: Selected device EPM3032ATC44-10 for design "GG_AV"
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 156 megabytes
-    Info: Processing ended: Wed Jan 07 22:10:18 2015
+    Info: Processing ended: Thu Jan 08 23:09:34 2015
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

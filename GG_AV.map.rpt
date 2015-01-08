@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GG_AV
-Wed Jan 07 22:10:15 2015
+Thu Jan 08 23:09:32 2015
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -39,7 +39,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Jan 07 22:10:15 2015    ;
+; Analysis & Synthesis Status ; Successful - Thu Jan 08 23:09:32 2015    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; GG_AV                                    ;
 ; Top-level Entity Name       ; GG_AV                                    ;
@@ -108,13 +108,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+-----------------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+
-; GG_AV.vhd                        ; yes             ; User VHDL File  ; C:/Documents and Settings/steward/gamegear_av/GG_AV.vhd ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                               ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                            ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------+
+; gg_av.vhd                        ; yes             ; Auto-Found VHDL File  ; C:/Documents and Settings/steward/gamegear_av/gg_av.vhd ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------+
 
 
 +---------------------------------------------+
@@ -166,10 +166,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Wed Jan 07 22:10:11 2015
+    Info: Processing started: Thu Jan 08 23:09:27 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GG_AV -c GG_AV
 Info: Only one processor detected - disabling parallel compilation
-Info: Found 2 design units, including 1 entities, in source file gg_av.vhd
+Info: Found 1 design units, including 1 entities, in source file ahdl1.tdf
+    Info: Found entity 1: ggtv
+Warning: Using design file gg_av.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: GG_AV-behavioral
     Info: Found entity 1: GG_AV
 Info: Elaborating entity "GG_AV" for the top level hierarchy
@@ -183,10 +185,10 @@ Info: Implemented 51 device resources after synthesis - the final resource count
     Info: Implemented 8 input pins
     Info: Implemented 15 output pins
     Info: Implemented 28 macrocells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 186 megabytes
-    Info: Processing ended: Wed Jan 07 22:10:15 2015
-    Info: Elapsed time: 00:00:04
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 188 megabytes
+    Info: Processing ended: Thu Jan 08 23:09:32 2015
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
 

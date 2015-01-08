@@ -45,7 +45,6 @@ set_global_assignment -name LAST_QUARTUS_VERSION 9.1
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
 set_global_assignment -name MISC_FILE "C:/Documents and Settings/Administrator/Desktop/GG_AV/GG_AV.dpf"
 set_global_assignment -name MAX7000_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_global_assignment -name VHDL_FILE GG_AV.vhd
 set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_location_assignment PIN_15 -to blue_out[0]
@@ -79,3 +78,4 @@ set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
 set_global_assignment -name ENABLE_DRC_SETTINGS ON
 set_global_assignment -name SMART_RECOMPILE ON
 set_global_assignment -name MAX7000_OPTIMIZATION_TECHNIQUE BALANCED
+set_global_assignment -name AHDL_FILE Ahdl1.tdf

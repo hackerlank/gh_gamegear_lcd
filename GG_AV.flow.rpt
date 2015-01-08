@@ -1,5 +1,5 @@
 Flow report for GG_AV
-Wed Jan 07 22:10:27 2015
+Thu Jan 08 23:09:43 2015
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------+
 ; Flow Summary                                                       ;
 +-------------------------+------------------------------------------+
-; Flow Status             ; Analyzed - Wed Jan 07 22:10:27 2015      ;
+; Flow Status             ; Analyzed - Thu Jan 08 23:09:43 2015      ;
 ; Quartus II Version      ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name           ; GG_AV                                    ;
 ; Top-level Entity Name   ; GG_AV                                    ;
@@ -56,7 +56,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/07/2015 22:10:12 ;
+; Start date & time ; 01/08/2015 23:09:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; GG_AV               ;
 +-------------------+---------------------+
@@ -67,7 +67,7 @@ applicable agreement for further details.
 +------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 155355906049.142063981202496                                    ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 155355906049.142072976802004                                    ; --            ; --          ; --             ;
 ; ENABLE_DRC_SETTINGS                ; On                                                              ; Off           ; --          ; --             ;
 ; FITTER_EFFORT                      ; Standard Fit                                                    ; Auto Fit      ; --          ; --             ;
 ; MAX7000_OPTIMIZATION_TECHNIQUE     ; Balanced                                                        ; Speed         ; --          ; --             ;
@@ -86,12 +86,12 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:04     ; 1.0                     ; 186 MB              ; 00:00:04                           ;
-; Fitter                  ; 00:00:01     ; 1.0                     ; 131 MB              ; 00:00:01                           ;
+; Analysis & Synthesis    ; 00:00:05     ; 1.0                     ; 188 MB              ; 00:00:04                           ;
+; Fitter                  ; 00:00:00     ; 1.0                     ; 131 MB              ; 00:00:01                           ;
 ; Assembler               ; 00:00:01     ; 1.0                     ; 139 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 110 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 110 MB              ; 00:00:01                           ;
 ; Design Assistant        ; 00:00:01     ; 1.0                     ; 112 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:07     ; --                      ; --                  ; 00:00:08                           ;
+; Total                   ; 00:00:08     ; --                      ; --                  ; 00:00:08                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
