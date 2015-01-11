@@ -1,5 +1,5 @@
 Design Assistant report for GG_AV
-Thu Jan 08 23:09:43 2015
+Sun Jan 11 22:52:38 2015
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -9,8 +9,9 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
   1. Legal Notice
   2. Design Assistant Summary
   3. Design Assistant Settings
-  4. Information only Violations
-  5. Design Assistant Messages
+  4. Medium Violations
+  5. Information only Violations
+  6. Design Assistant Messages
 
 
 
@@ -36,15 +37,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Design Assistant Summary                                                ;
 +-----------------------------------+-------------------------------------+
-; Design Assistant Status           ; Analyzed - Thu Jan 08 23:09:43 2015 ;
+; Design Assistant Status           ; Analyzed - Sun Jan 11 22:52:38 2015 ;
 ; Revision Name                     ; GG_AV                               ;
 ; Top-level Entity Name             ; GG_AV                               ;
 ; Family                            ; MAX3000A                            ;
 ; Total Critical Violations         ; 0                                   ;
 ; Total High Violations             ; 0                                   ;
-; Total Medium Violations           ; 0                                   ;
-; Total Information only Violations ; 35                                  ;
-; - Rule T102                       ; 35                                  ;
+; Total Medium Violations           ; 4                                   ;
+; - Rule C104                       ; 3                                   ;
+; - Rule R102                       ; 1                                   ;
+; Total Information only Violations ; 30                                  ;
+; - Rule T102                       ; 30                                  ;
 +-----------------------------------+-------------------------------------+
 
 
@@ -94,47 +97,72 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+----+
 
 
-+----------------------------------------------------------------------------------------+
-; Information only Violations                                                            ;
-+----------------------------------------------------------+-------------------+---------+
-; Rule name                                                ; Name              ; Fan-Out ;
-+----------------------------------------------------------+-------------------+---------+
-; Rule T102: Top nodes with the highest number of fan-outs ; pix_clk           ; 27      ;
-; Rule T102: Top nodes with the highest number of fan-outs ; hsync             ; 15      ;
-; Rule T102: Top nodes with the highest number of fan-outs ; ffb_in            ; 6       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; ffa_in            ; 6       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; ffc_in            ; 6       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; ffblue_clk        ; 4       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; ffgreen_clk       ; 4       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; ffred_clk         ; 4       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; ffred_in[3]       ; 3       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; cnt[0]            ; 3       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; ffred_in[2]       ; 3       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; ffred_in[1]       ; 3       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; ffred_in[0]       ; 3       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; blue_out[2]~reg0  ; 2       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; cnt[1]            ; 2       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; blue_out[3]~reg0  ; 2       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; blue_out[0]~reg0  ; 2       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; blue_out[1]~reg0  ; 2       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; cs_out~reg0       ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; csync             ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; red_out[0]~reg0   ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; cnt[2]            ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; sc_out~reg0       ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; d_in[1]           ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; d_in[3]           ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; ~VCC~0            ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; d_in[2]           ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; d_in[0]           ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; green_out[3]~reg0 ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; green_out[2]~reg0 ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; green_out[1]~reg0 ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; green_out[0]~reg0 ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; red_out[3]~reg0   ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; red_out[2]~reg0   ; 1       ;
-; Rule T102: Top nodes with the highest number of fan-outs ; red_out[1]~reg0   ; 1       ;
-+----------------------------------------------------------+-------------------+---------+
++------------------------------------------------------------------------------------------------------+
+; Medium Violations                                                                                    ;
++---------------------------------------------------------------------------------------+--------------+
+; Rule name                                                                             ; Name         ;
++---------------------------------------------------------------------------------------+--------------+
+; Rule C104: Clock signal source should drive only clock input ports                    ; ffb          ;
+;  Clock ports destination node(s) list                                                 ; blue_dff[0]  ;
+;  Clock ports destination node(s) list                                                 ; blue_dff[1]  ;
+;  Clock ports destination node(s) list                                                 ; blue_dff[2]  ;
+;  Clock ports destination node(s) list                                                 ; blue_dff[3]  ;
+;  Non-clock ports destination node(s) list                                             ; ffc          ;
+; Rule C104: Clock signal source should drive only clock input ports                    ; ffa          ;
+;  Clock ports destination node(s) list                                                 ; red_dff[0]   ;
+;  Clock ports destination node(s) list                                                 ; red_dff[1]   ;
+;  Clock ports destination node(s) list                                                 ; red_dff[2]   ;
+;  Clock ports destination node(s) list                                                 ; red_dff[3]   ;
+;  Non-clock ports destination node(s) list                                             ; ffb          ;
+; Rule C104: Clock signal source should drive only clock input ports                    ; ffc          ;
+;  Clock ports destination node(s) list                                                 ; green_dff[0] ;
+;  Clock ports destination node(s) list                                                 ; green_dff[1] ;
+;  Clock ports destination node(s) list                                                 ; green_dff[2] ;
+;  Clock ports destination node(s) list                                                 ; green_dff[3] ;
+;  Non-clock ports destination node(s) list                                             ; ffa          ;
+; Rule R102: External reset signals should be synchronized using two cascaded registers ; hsync        ;
+;  Reset signal destination node(s) list                                                ; ffb          ;
+;  Reset signal destination node(s) list                                                ; ffa          ;
+;  Reset signal destination node(s) list                                                ; ffc          ;
++---------------------------------------------------------------------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Information only Violations                                                                             ;
++----------------------------------------------------------+------------------------------------+---------+
+; Rule name                                                ; Name                               ; Fan-Out ;
++----------------------------------------------------------+------------------------------------+---------+
+; Rule T102: Top nodes with the highest number of fan-outs ; en_in                              ; 15      ;
+; Rule T102: Top nodes with the highest number of fan-outs ; pix_clk                            ; 7       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; ffc                                ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; ffb                                ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; ffa                                ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; lpm_counter:div_nine_rtl_0|dffs[3] ; 5       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; lpm_counter:div_nine_rtl_0|dffs[0] ; 4       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; lpm_counter:div_nine_rtl_0|dffs[2] ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; d_in[1]                            ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; hsync                              ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; d_in[2]                            ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; d_in[3]                            ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; d_in[0]                            ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; lpm_counter:div_nine_rtl_0|dffs[1] ; 3       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; csync~1                            ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; csync                              ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; green_dff[1]                       ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; green_dff[0]                       ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; red_dff[3]                         ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; red_dff[2]                         ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; red_dff[1]                         ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; en_in~4                            ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; red_dff[0]                         ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; blue_dff[3]                        ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; op_3~1                             ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; blue_dff[2]                        ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; blue_dff[1]                        ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; blue_dff[0]                        ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; green_dff[3]                       ; 1       ;
+; Rule T102: Top nodes with the highest number of fan-outs ; green_dff[2]                       ; 1       ;
++----------------------------------------------------------+------------------------------------+---------+
 
 
 +---------------------------+
@@ -143,45 +171,50 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Design Assistant
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Jan 08 23:09:42 2015
+    Info: Processing started: Sun Jan 11 22:52:38 2015
 Info: Command: quartus_drc --read_settings_files=off --write_settings_files=off GG_AV -c GG_AV
-Info: (Information) Rule T102: Top nodes with the highest number of fan-outs. (Value defined:50). Found 35 node(s) with highest fan-out.
+Warning: (Medium) Rule C104: Clock signal source should drive only clock input ports. Found 3 nodes related to this rule.
+    Warning: Node  "ffb"
+    Warning: Node  "ffa"
+    Warning: Node  "ffc"
+Warning: (Medium) Rule R102: External reset signals should be synchronized using two cascaded registers. Found 1 node(s) related to this rule.
+    Warning: Node  "hsync"
+Info: (Information) Rule T102: Top nodes with the highest number of fan-outs. (Value defined:50). Found 30 node(s) with highest fan-out.
+    Info: Node  "en_in"
     Info: Node  "pix_clk"
-    Info: Node  "hsync"
-    Info: Node  "ffb_in"
-    Info: Node  "ffa_in"
-    Info: Node  "ffc_in"
-    Info: Node  "ffblue_clk"
-    Info: Node  "ffgreen_clk"
-    Info: Node  "ffred_clk"
-    Info: Node  "ffred_in[3]"
-    Info: Node  "cnt[0]"
-    Info: Node  "ffred_in[2]"
-    Info: Node  "ffred_in[1]"
-    Info: Node  "ffred_in[0]"
-    Info: Node  "blue_out[2]~reg0"
-    Info: Node  "cnt[1]"
-    Info: Node  "blue_out[3]~reg0"
-    Info: Node  "blue_out[0]~reg0"
-    Info: Node  "blue_out[1]~reg0"
-    Info: Node  "cs_out~reg0"
-    Info: Node  "csync"
-    Info: Node  "red_out[0]~reg0"
-    Info: Node  "cnt[2]"
-    Info: Node  "sc_out~reg0"
+    Info: Node  "ffc"
+    Info: Node  "ffb"
+    Info: Node  "ffa"
+    Info: Node  "lpm_counter:div_nine_rtl_0|dffs[3]"
+    Info: Node  "lpm_counter:div_nine_rtl_0|dffs[0]"
+    Info: Node  "lpm_counter:div_nine_rtl_0|dffs[2]"
     Info: Node  "d_in[1]"
-    Info: Node  "d_in[3]"
-    Info: Node  "~VCC~0"
+    Info: Node  "hsync"
     Info: Node  "d_in[2]"
+    Info: Node  "d_in[3]"
     Info: Node  "d_in[0]"
-    Info: Node  "green_out[3]~reg0"
-    Info: Node  "green_out[2]~reg0"
-    Info: Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
-Info: Design Assistant information: finished post-fitting analysis of current design -- generated 35 information messages and 0 warning messages
-Info: Quartus II Design Assistant was successful. 0 errors, 0 warnings
+    Info: Node  "lpm_counter:div_nine_rtl_0|dffs[1]"
+    Info: Node  "csync~1"
+    Info: Node  "csync"
+    Info: Node  "green_dff[1]"
+    Info: Node  "green_dff[0]"
+    Info: Node  "red_dff[3]"
+    Info: Node  "red_dff[2]"
+    Info: Node  "red_dff[1]"
+    Info: Node  "en_in~4"
+    Info: Node  "red_dff[0]"
+    Info: Node  "blue_dff[3]"
+    Info: Node  "op_3~1"
+    Info: Node  "blue_dff[2]"
+    Info: Node  "blue_dff[1]"
+    Info: Node  "blue_dff[0]"
+    Info: Node  "green_dff[3]"
+    Info: Node  "green_dff[2]"
+Info: Design Assistant information: finished post-fitting analysis of current design -- generated 30 information messages and 4 warning messages
+Info: Quartus II Design Assistant was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 131 megabytes
-    Info: Processing ended: Thu Jan 08 23:09:43 2015
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Processing ended: Sun Jan 11 22:52:38 2015
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

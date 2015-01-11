@@ -1,5 +1,5 @@
 Analysis & Synthesis report for GG_AV
-Thu Jan 08 23:09:32 2015
+Sun Jan 11 22:52:27 2015
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -12,8 +12,9 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. Registers Removed During Synthesis
-  8. Analysis & Synthesis Messages
+  7. Source assignments for lpm_counter:div_nine_rtl_0
+  8. Parameter Settings for Inferred Entity Instance: lpm_counter:div_nine_rtl_0
+  9. Analysis & Synthesis Messages
 
 
 
@@ -39,12 +40,12 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Jan 08 23:09:32 2015    ;
+; Analysis & Synthesis Status ; Successful - Sun Jan 11 22:52:27 2015    ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name               ; GG_AV                                    ;
 ; Top-level Entity Name       ; GG_AV                                    ;
 ; Family                      ; MAX3000A                                 ;
-; Total macrocells            ; 28                                       ;
+; Total macrocells            ; 22                                       ;
 ; Total pins                  ; 23                                       ;
 +-----------------------------+------------------------------------------+
 
@@ -108,13 +109,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+-----------------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                               ;
-+----------------------------------+-----------------+-----------------------+---------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                            ;
-+----------------------------------+-----------------+-----------------------+---------------------------------------------------------+
-; gg_av.vhd                        ; yes             ; Auto-Found VHDL File  ; C:/Documents and Settings/steward/gamegear_av/gg_av.vhd ;
-+----------------------------------+-----------------+-----------------------+---------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                 ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+
+; GG_AV.tdf                        ; yes             ; User AHDL File  ; C:/Documents and Settings/steward/gamegear_av/GG_AV.tdf      ;
+; lpm_counter.tdf                  ; yes             ; Megafunction    ; c:/altera/91/quartus/libraries/megafunctions/lpm_counter.tdf ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+
 
 
 +---------------------------------------------+
@@ -122,42 +124,62 @@ applicable agreement for further details.
 +----------------------+----------------------+
 ; Resource             ; Usage                ;
 +----------------------+----------------------+
-; Logic cells          ; 28                   ;
-; Total registers      ; 27                   ;
+; Logic cells          ; 22                   ;
+; Total registers      ; 19                   ;
 ; I/O pins             ; 23                   ;
-; Maximum fan-out node ; pix_clk              ;
-; Maximum fan-out      ; 27                   ;
-; Total fan-out        ; 114                  ;
-; Average fan-out      ; 2.24                 ;
+; Maximum fan-out node ; en_in                ;
+; Maximum fan-out      ; 15                   ;
+; Total fan-out        ; 83                   ;
+; Average fan-out      ; 1.84                 ;
 +----------------------+----------------------+
 
 
-+-------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                 ;
-+----------------------------+------------+------+---------------------+--------------+
-; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+------------+------+---------------------+--------------+
-; |GG_AV                     ; 28         ; 23   ; |GG_AV              ; work         ;
-+----------------------------+------------+------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                    ;
++---------------------------------+------------+------+-----------------------------------+--------------+
+; Compilation Hierarchy Node      ; Macrocells ; Pins ; Full Hierarchy Name               ; Library Name ;
++---------------------------------+------------+------+-----------------------------------+--------------+
+; |GG_AV                          ; 22         ; 23   ; |GG_AV                            ; work         ;
+;    |lpm_counter:div_nine_rtl_0| ; 4          ; 0    ; |GG_AV|lpm_counter:div_nine_rtl_0 ; work         ;
++---------------------------------+------------+------+-----------------------------------+--------------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; en_out~reg0                            ; Stuck at VCC due to stuck port data_in ;
-; cnt[3]                                 ; Stuck at GND due to stuck port data_in ;
-; ffblue_in[3]                           ; Merged with ffred_in[3]                ;
-; ffgreen_in[3]                          ; Merged with ffred_in[3]                ;
-; ffblue_in[2]                           ; Merged with ffred_in[2]                ;
-; ffgreen_in[2]                          ; Merged with ffred_in[2]                ;
-; ffblue_in[1]                           ; Merged with ffred_in[1]                ;
-; ffgreen_in[1]                          ; Merged with ffred_in[1]                ;
-; ffblue_in[0]                           ; Merged with ffred_in[0]                ;
-; ffgreen_in[0]                          ; Merged with ffred_in[0]                ;
-; Total Number of Removed Registers = 10 ;                                        ;
-+----------------------------------------+----------------------------------------+
++---------------------------------------------------+
+; Source assignments for lpm_counter:div_nine_rtl_0 ;
++---------------------------+-------+------+--------+
+; Assignment                ; Value ; From ; To     ;
++---------------------------+-------+------+--------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -      ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -      ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -      ;
++---------------------------+-------+------+--------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_counter:div_nine_rtl_0 ;
++------------------------+-------------------+--------------------------------+
+; Parameter Name         ; Value             ; Type                           ;
++------------------------+-------------------+--------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                 ;
+; LPM_WIDTH              ; 4                 ; Untyped                        ;
+; LPM_DIRECTION          ; UP                ; Untyped                        ;
+; LPM_MODULUS            ; 0                 ; Untyped                        ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                        ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                        ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                        ;
+; DEVICE_FAMILY          ; MAX3000A          ; Untyped                        ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                        ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH             ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK             ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                        ;
+; LABWIDE_SCLR           ; ON                ; Untyped                        ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                        ;
+; CBXI_PARAMETER         ; NOTHING           ; Untyped                        ;
++------------------------+-------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -166,29 +188,38 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
-    Info: Processing started: Thu Jan 08 23:09:27 2015
+    Info: Processing started: Sun Jan 11 22:52:25 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GG_AV -c GG_AV
 Info: Only one processor detected - disabling parallel compilation
-Info: Found 1 design units, including 1 entities, in source file ahdl1.tdf
-    Info: Found entity 1: ggtv
-Warning: Using design file gg_av.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info: Found design unit 1: GG_AV-behavioral
+Info: Found 1 design units, including 1 entities, in source file gg_av.tdf
     Info: Found entity 1: GG_AV
 Info: Elaborating entity "GG_AV" for the top level hierarchy
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "en_out" is stuck at VCC
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred lpm_counter megafunction (LPM_WIDTH=4) from the following logic: "div_nine[0]~0"
+Info: Elaborated megafunction instantiation "lpm_counter:div_nine_rtl_0"
+Info: Instantiated megafunction "lpm_counter:div_nine_rtl_0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "4"
+    Info: Parameter "LPM_DIRECTION" = "UP"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
 Info: Promoted pin-driven signal(s) to global signal
     Info: Promoted clock signal driven by pin "pix_clk" to global clock signal
-Warning: Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "en_in"
-Info: Implemented 51 device resources after synthesis - the final resource count might be different
+    Info: Promoted output enable signal driven by pin "en_in" to global output enable signal
+Info: Implemented 45 device resources after synthesis - the final resource count might be different
     Info: Implemented 8 input pins
     Info: Implemented 15 output pins
-    Info: Implemented 28 macrocells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 188 megabytes
-    Info: Processing ended: Thu Jan 08 23:09:32 2015
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Implemented 22 macrocells
+Warning: Ignored assignments for entity "GG_AV.tdf" -- entity does not exist in design
+    Warning: Assignment for entity set_global_assignment -name EDA_DESIGN_ENTRY_SYNTHESIS_TOOL "Blast FPGA" -entity GG_AV.tdf was ignored
+    Warning: Assignment for entity set_global_assignment -name EDA_INPUT_GND_NAME GND -entity GG_AV.tdf -section_id eda_design_synthesis was ignored
+    Warning: Assignment for entity set_global_assignment -name EDA_INPUT_VCC_NAME VDD -entity GG_AV.tdf -section_id eda_design_synthesis was ignored
+    Warning: Assignment for entity set_global_assignment -name EDA_INPUT_DATA_FORMAT VQM -entity GG_AV.tdf -section_id eda_design_synthesis was ignored
+    Warning: Assignment for entity set_global_assignment -name EDA_LMF_FILE blast.lmf -entity GG_AV.tdf -section_id eda_design_synthesis was ignored
+    Warning: Assignment for entity set_global_assignment -name EDA_SHOW_LMF_MAPPING_MESSAGES OFF -entity GG_AV.tdf -section_id eda_design_synthesis was ignored
+    Warning: Assignment for entity set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY OFF -entity GG_AV.tdf -section_id eda_design_synthesis was ignored
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 163 megabytes
+    Info: Processing ended: Sun Jan 11 22:52:27 2015
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

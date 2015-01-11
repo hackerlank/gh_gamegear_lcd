@@ -1,5 +1,5 @@
 Flow report for GG_AV
-Thu Jan 08 23:09:43 2015
+Sun Jan 11 22:52:38 2015
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------+
 ; Flow Summary                                                       ;
 +-------------------------+------------------------------------------+
-; Flow Status             ; Analyzed - Thu Jan 08 23:09:43 2015      ;
+; Flow Status             ; Analyzed - Sun Jan 11 22:52:38 2015      ;
 ; Quartus II Version      ; 9.1 Build 222 10/21/2009 SJ Full Version ;
 ; Revision Name           ; GG_AV                                    ;
 ; Top-level Entity Name   ; GG_AV                                    ;
@@ -46,7 +46,7 @@ applicable agreement for further details.
 ; Device                  ; EPM3032ATC44-10                          ;
 ; Timing Models           ; Final                                    ;
 ; Met timing requirements ; Yes                                      ;
-; Total macrocells        ; 28 / 32 ( 88 % )                         ;
+; Total macrocells        ; 22 / 32 ( 69 % )                         ;
 ; Total pins              ; 27 / 34 ( 79 % )                         ;
 +-------------------------+------------------------------------------+
 
@@ -56,29 +56,36 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/08/2015 23:09:28 ;
+; Start date & time ; 01/11/2015 22:52:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; GG_AV               ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                    ;
-+------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
-; Assignment Name                    ; Value                                                           ; Default Value ; Entity Name ; Section Id     ;
-+------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 155355906049.142072976802004                                    ; --            ; --          ; --             ;
-; ENABLE_DRC_SETTINGS                ; On                                                              ; Off           ; --          ; --             ;
-; FITTER_EFFORT                      ; Standard Fit                                                    ; Auto Fit      ; --          ; --             ;
-; MAX7000_OPTIMIZATION_TECHNIQUE     ; Balanced                                                        ; Speed         ; --          ; --             ;
-; MISC_FILE                          ; C:/Documents and Settings/Administrator/Desktop/GG_AV/GG_AV.dpf ; --            ; --          ; --             ;
-; MISC_FILE                          ; C:/Documents and Settings/Administrator/gamegear_av/GG_AV.dpf   ; --            ; --          ; --             ;
-; MISC_FILE                          ; C:/Documents and Settings/steward/gamegear_av/GG_AV.dpf         ; --            ; --          ; --             ;
-; OPTIMIZE_HOLD_TIMING               ; Off                                                             ; --            ; --          ; --             ;
-; SMART_RECOMPILE                    ; On                                                              ; Off           ; --          ; --             ;
-; SYNTH_TIMING_DRIVEN_SYNTHESIS      ; Off                                                             ; --            ; --          ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                             ; --            ; --          ; eda_blast_fpga ;
-+------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                          ;
++------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------------+
+; Assignment Name                    ; Value                                                           ; Default Value ; Entity Name ; Section Id           ;
++------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------------+
+; COMPILER_SIGNATURE_ID              ; 155355906049.142098794603584                                    ; --            ; --          ; --                   ;
+; EDA_DESIGN_ENTRY_SYNTHESIS_TOOL    ; Blast FPGA                                                      ; <None>        ; GG_AV.tdf   ; --                   ;
+; EDA_INPUT_DATA_FORMAT              ; Vqm                                                             ; --            ; GG_AV.tdf   ; eda_design_synthesis ;
+; EDA_INPUT_GND_NAME                 ; Gnd                                                             ; --            ; GG_AV.tdf   ; eda_design_synthesis ;
+; EDA_INPUT_VCC_NAME                 ; Vdd                                                             ; --            ; GG_AV.tdf   ; eda_design_synthesis ;
+; EDA_LMF_FILE                       ; blast.lmf                                                       ; --            ; GG_AV.tdf   ; eda_design_synthesis ;
+; EDA_RUN_TOOL_AUTOMATICALLY         ; Off                                                             ; --            ; GG_AV.tdf   ; eda_design_synthesis ;
+; EDA_SHOW_LMF_MAPPING_MESSAGES      ; Off                                                             ; --            ; GG_AV.tdf   ; eda_design_synthesis ;
+; ENABLE_DRC_SETTINGS                ; On                                                              ; Off           ; --          ; --                   ;
+; FITTER_EFFORT                      ; Standard Fit                                                    ; Auto Fit      ; --          ; --                   ;
+; MAX7000_OPTIMIZATION_TECHNIQUE     ; Balanced                                                        ; Speed         ; --          ; --                   ;
+; MISC_FILE                          ; C:/Documents and Settings/Administrator/Desktop/GG_AV/GG_AV.dpf ; --            ; --          ; --                   ;
+; MISC_FILE                          ; C:/Documents and Settings/Administrator/gamegear_av/GG_AV.dpf   ; --            ; --          ; --                   ;
+; MISC_FILE                          ; C:/Documents and Settings/steward/gamegear_av/GG_AV.dpf         ; --            ; --          ; --                   ;
+; OPTIMIZE_HOLD_TIMING               ; Off                                                             ; --            ; --          ; --                   ;
+; SMART_RECOMPILE                    ; On                                                              ; Off           ; --          ; --                   ;
+; SYNTH_TIMING_DRIVEN_SYNTHESIS      ; Off                                                             ; --            ; --          ; --                   ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                             ; --            ; --          ; eda_blast_fpga       ;
++------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -86,12 +93,12 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:05     ; 1.0                     ; 188 MB              ; 00:00:04                           ;
-; Fitter                  ; 00:00:00     ; 1.0                     ; 131 MB              ; 00:00:01                           ;
+; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 163 MB              ; 00:00:02                           ;
+; Fitter                  ; 00:00:01     ; 1.0                     ; 131 MB              ; 00:00:01                           ;
 ; Assembler               ; 00:00:01     ; 1.0                     ; 139 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 110 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 110 MB              ; 00:00:01                           ;
 ; Design Assistant        ; 00:00:01     ; 1.0                     ; 112 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:08     ; --                      ; --                  ; 00:00:08                           ;
+; Total                   ; 00:00:05     ; --                      ; --                  ; 00:00:06                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1095,31 +1095,19 @@ GG_AV
 # storage
 db|GG_AV.(0).cnf
 db|GG_AV.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
 # case_insensitive
 # source_file
-gg_av.vhd
-f25af251c4bacaa735c0561e7b116256
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
+gg_av.tdf
+c474ee3c5a8ff8ba7b49333a273f4dab
+7
+# used_port {
+0
+-1
+0
 }
 # hierarchies {
 |
 }
-# lmf
-|altera|91|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
