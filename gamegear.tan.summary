@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.300 ns
+From           : d_in[3]
+To             : green_dff[3]
+From Clock     : --
+To Clock       : pix_clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.400 ns
+From           : lpm_counter:div_nine_rtl_0|dffs[2]
+To             : sc_out
+From Clock     : pix_clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.000 ns
+From           : csync
+To             : cs_out
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.900 ns
+From           : d_in[3]
+To             : red_dff[3]
+From Clock     : --
+To Clock       : pix_clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'pix_clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 102.04 MHz ( period = 9.800 ns )
+From           : ffa
+To             : ffb
+From Clock     : pix_clk
+To Clock       : pix_clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
